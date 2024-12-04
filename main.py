@@ -62,25 +62,25 @@ print()
 #find mean
 mean = scienceFictionMovieData["audience_rating"].mean()
 print("The mean audience rating of the data set is: " + str(mean))
-print(favMovie + " [is higher than/lower than/the same as] the mean movie rating.")
+print(favMovie + " lower than the mean movie rating.")
 
 #find median
 median = scienceFictionMovieData["audience_rating"].median()
 print("The median audience rating of the data set is: " + str(median))
-print(favMovie + " [is higher than/lower than/the same as] the median movie rating.")
+print(favMovie + " lower than the median movie rating.")
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 input("Press enter to see data visualizations.\n")
 
 #Part 6 Create graphs
 #Create histogram
-
+plt.hist(scienceFictionMovieData["audience_rating"], range = (0, 100), bins = 20)
 
 #Adds labels and adjusts histogram
 plt.grid(True)
-plt.title("")
-plt.xlabel("")
-plt.ylabel("")
+plt.title("Audience Ratings of Science Fiction Movies Histogram")
+plt.xlabel("Audience Ratings")
+plt.ylabel("Number of Science Fiction Movies")
 
 #Prints interpretation of histogram
 print(
