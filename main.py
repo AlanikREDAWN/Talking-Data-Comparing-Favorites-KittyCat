@@ -62,12 +62,12 @@ print()
 #find mean
 mean = scienceFictionMovieData["audience_rating"].mean()
 print("The mean audience rating of the data set is: " + str(mean))
-print(favMovie + " lower than the mean movie rating.")
+print(favMovie + " is lower than the mean movie rating.")
 
 #find median
 median = scienceFictionMovieData["audience_rating"].median()
 print("The median audience rating of the data set is: " + str(median))
-print(favMovie + " lower than the median movie rating.")
+print(favMovie + " is lower than the median movie rating.")
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 input("Press enter to see data visualizations.\n")
@@ -84,7 +84,7 @@ plt.ylabel("Number of Science Fiction Movies")
 
 #Prints interpretation of histogram
 print(
-  "According to the histogram, ..."
+  "According to the histogram, there are less than 20 movies with the highest possible rating. Most of the movies are rated around less than 60. Most are the movies are rated somewhere in the upper to middle range, forming a very curved looking histogram"
 )
 print("Close the graph by pressing the 'X' in the top right corner.")
 print()
@@ -93,13 +93,13 @@ print()
 plt.show()
 
 #Create scatterplot
-
+plt.scatter(data = scienceFictionMovieData, x = "audience_rating", y = "critic_rating")
 
 #Adds labels and adjusts scatterplot
 plt.grid(True)
-plt.title("")
-plt.xlabel("")
-plt.ylabel("")
+plt.title("Audience Rating versus Critic Rating")
+plt.xlabel("Audience Rating")
+plt.ylabel("Critic Rating")
 plt.xlim(0, 100)
 plt.ylim(0, 100)
 
