@@ -105,7 +105,7 @@ plt.ylim(0, 100)
 
 #Prints interpretation of scatterplot
 print(
-  "According to the scatter plot, ..."
+  "According to the scatter plot, there is a positive correlation. Their is a pattern going to the top right, however there are a few outliers, with the middle of the graph being a bit scattered, but concentrated in the middle."
 )
 print()
 
