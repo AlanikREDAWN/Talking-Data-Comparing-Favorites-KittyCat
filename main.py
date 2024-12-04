@@ -50,13 +50,13 @@ input("Press enter to see more information about how " + favMovie +
 #min
 min = scienceFictionMovieData["audience_rating"].min()
 print("The min audience rating of the data set is: " + str(min))
-print(favMovie + " is rated" + (min - 47) + "points higher than the lowest rated movie.")
+print(favMovie + " is rated" + str(min - 47) + "points higher than the lowest rated movie.")
 print()
 
 #find max
 max = scienceFictionMovieData["audience_rating"].max()
 print("The max audience rating of the data set is: " + str(max))
-print(favMovie + " is rated" + (max - 47) + "points lower than the highest rated movie.")
+print(favMovie + " is rated" + str(max - 47) + "points lower than the highest rated movie.")
 print()
 
 #find mean
