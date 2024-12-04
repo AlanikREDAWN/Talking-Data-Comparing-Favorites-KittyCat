@@ -32,15 +32,15 @@ print(favMovieData)
 print("\n\n")
 
 #Create a new variable to store a new data set with a certain genre
+scienceFictionMovieBooleanList = movieData["genres"].str.contains("Science Fiction")
 
+scienceFictionMovieData = movieData.loc[scienceFictionMovieBooleanList]
 
-
-
-numOfMovies = 0
+numOfMovies = scienceFictionMovieData.shape[0]
 
 print("We will be comparing " + favMovie +
-      " to other movies under the genre [X] in the data set.\n")
-print("There are " + str(numOfMovies) + " movies under the category [X].")
+      " to other movies under the genre Science Fiction in the data set.\n")
+print("There are " + str(numOfMovies) + " movies under the category Science Fiction.")
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 input("Press enter to see more information about how " + favMovie +
