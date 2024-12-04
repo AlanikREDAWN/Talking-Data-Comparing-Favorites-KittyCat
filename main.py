@@ -1,5 +1,3 @@
-#Talking Data Starter Code
-
 #Part 2 Setting up the program
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -8,18 +6,24 @@ pd.set_option('display.max_columns', None)
 pd.set_option('max_colwidth', None)
 
 movieData = pd.read_csv('./rotten_tomatoes_movies.csv')
-favMovie = ""
+favMovie = "Captain Marvel"
 
-
+print("My favorite movie is  " + favMovie)
 
 
 #Part 3 Investigate the data
-
+# print(movieData.head())
+# print(movieData["movie_title"])
 
 
 #Part 4 Filter data
 print("\nThe data for my favorite movie is:\n")
 #Create a new variable to store your favorite movie information
+favMovieBooleanList = movieData["movie_title"] == favMovie
+# print(favMovieBooleanList)
+
+favMovieData = movieData.loc[favMovieBooleanList]
+print(favMovieData)
 
 
 
